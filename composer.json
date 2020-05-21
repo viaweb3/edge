@@ -1,0 +1,23 @@
+{
+    "name": "niulingyun/edge",
+    "description": "encrypt and decrypt keys",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Leandre",
+            "email": "leandre@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Edge\\" : "."
+        },
+        "files": [
+            "edge.php"
+        ]
+    },
+    "require": {
+        "php": "^7.1.0",
+        "ext-openssl": "*"
+    }
+}

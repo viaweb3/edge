@@ -1,0 +1,22 @@
+{
+  "name": "niulingyun-edge",
+  "version": "1.0.0",
+  "description": "encrypt and decrypt keys",
+  "main": "edge.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niulingyun/edge.git"
+  },
+  "author": "Leandre <leandre@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niulingyun/edge/issues"
+  },
+  "homepage": "https://github.com/niulingyun/edge#readme"
+}
