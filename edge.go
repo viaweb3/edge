@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"strings"
 )
 
 func Encrypt(plainText, key string) string {
@@ -71,13 +72,12 @@ func PKCS7UnPadding(origData []byte) []byte {
 	return origData[:(length - unpadding)]
 }
 
-// GetPrivatekeyPass return the password
-func GetPrivatekeyPass(dir string) string {
-	passfile := fmt.Sprintf("%s/%s", dir, ".privatekeypass")
+func GetEdgePass(dir string) string {
+	passfile := fmt.Sprintf("%s/%s", dir, ".edgepass")
 
 	bs, err := ioutil.ReadFile(passfile)
 	if err != nil {
 		return ""
 	}
-	return fmt.Sprintf("%s", bs)
+	return strings.TrimSpace(fmt.Sprintf("%s", bs))
 }
