@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(
-    name='niulingyun-edge',
+    name='edge',
     version='1.0.0',
     packages=[],
     license="MIT",
