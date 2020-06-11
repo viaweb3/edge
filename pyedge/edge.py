@@ -9,9 +9,9 @@ def encrypt(plain_text, key):
 
     iv = Random.new().read(bs)
 
-    cipher = AES.new(key, AES.MODE_CBC, iv)
+    cipher = AES.new(key.encode("utf-8"), AES.MODE_CBC, iv)
 
-    encrypted = cipher.encrypt(pad(plain_text))
+    encrypted = cipher.encrypt(pad(plain_text).encode("utf-8"))
 
     return bytes.decode(base64.b64encode(iv + encrypted))
 
@@ -25,7 +25,7 @@ def decrypt(cipher_text, key):
 
     iv = cipher_text[:bs]
 
-    cipher = AES.new(key, AES.MODE_CBC, iv)
+    cipher = AES.new(key.encode("utf-8"), AES.MODE_CBC, iv)
 
     decrypted = unpad(cipher.decrypt(cipher_text[bs:]))
 
