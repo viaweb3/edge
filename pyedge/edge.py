@@ -2,8 +2,6 @@ from Crypto.Cipher import AES
 from Crypto import Random
 import base64
 
-# import Crypto.Cipher.AES
-
 def encrypt(plain_text, key):
     bs = AES.block_size
 
