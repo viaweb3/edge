@@ -81,3 +81,13 @@ func GetEdgePass(dir string) string {
 	}
 	return strings.TrimSpace(fmt.Sprintf("%s", bs))
 }
+
+func GetSilkpass(dir string) string {
+  passfile := fmt.Sprintf("%s/%s", dir, ".silkpass")
+
+  bs, err := ioutil.ReadFile(passfile)
+  if err != nil {
+    return ""
+  }
+  return strings.TrimSpace(fmt.Sprintf("%s", bs))
+}
